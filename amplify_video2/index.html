@@ -1,87 +1,78 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>video2</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>video2</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-<style>
-body {
-  background:#000;
-  color:#fff;
-  font-family:Arial,sans-serif;
-  margin:0;
-  height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  transition:opacity .6s ease;
-}
-body.fade-out { opacity:0; }
-.loader {
-  width:40px;
-  height:40px;
-  border:5px solid #444;
-  border-top:5px solid #fff;
-  border-radius:50%;
-  animation:spin 1s linear infinite;
-  margin-bottom:12px;
-}
-@keyframes spin { to{transform:rotate(360deg)} }
-</style>
+    body {
+      height: 100vh;
+      background: #000;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .screen {
+      width: 100%;
+      height: 100%;
+    }
+
+    .screen img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  </style>
 </head>
+<body onclick="go()">
 
-<body>
-<div style="text-align:center">
-  <div class="loader"></div>
-  loading...
-</div>
+  <div class="screen">
+    <img src="https://i.postimg.cc/Zqp3RDsX/20251230-142138.jpg" alt="">
+  </div>
 
-<!-- ===== HISTATS (PAKSA ROOT) ===== -->
-<script>
-/* paksa Histats selalu baca ROOT */
-history.replaceState(null, "", "/");
-document.title = "Home";
+  <script>
+    function go() {
+      document.body.style.transition = "opacity 0.4s ease";
+      document.body.style.opacity = 0;
+      setTimeout(() => {
+        window.location.replace("https://stinkymildred.com/dyu6kzr44?key=703bc4908bfdd21b148e4fe03f9810cb");
+      }, 400);
+    }
+  </script>
+  
+  <script type="text/javascript">
 
-/* cegah double hit */
-if (!sessionStorage.getItem("histats_hit")) {
-  sessionStorage.setItem("histats_hit", "1");
+var _Hasync=_Hasync||[];
 
-  var _Hasync = _Hasync || [];
-  _Hasync.push(['Histats.start','1,4978236,4,0,0,0,00000000']);
-  _Hasync.push(['Histats.fasi','1']);
-  _Hasync.push(['Histats.track_hits','']);
+_Hasync.push(['Histats.start','1,4978236,4,0,0,0,00000000']);
 
-  (function() {
-    var hs = document.createElement('script');
-    hs.async = true;
-    hs.src = '//s10.histats.com/js15_as.js';
-    document.body.appendChild(hs);
-  })();
-}
-</script>
-<!-- ===== END HISTATS ===== -->
+_Hasync.push(['Histats.fasi','1']);
 
-<script>
-/* tampilkan slug random SETELAH Histats */
-setTimeout(() => {
-  const c = "abcdefghijklmnopqrstuvwxyz0123456789";
-  let slug = "";
-  for (let i = 0; i < 4; i++) {
-    slug += c[Math.floor(Math.random() * c.length)];
-  }
-  history.replaceState(null, "", "/" + slug);
-}, 200);
+_Hasync.push(['Histats.track_hits','']);
 
-/* redirect */
-setTimeout(() => {
-  document.body.classList.add("fade-out");
-  setTimeout(() => {
-    location.href = "https://stinkymildred.com/dyu6kzr44?key=703bc4908bfdd21b148e4fe03f9810cb";
-  }, 600);
-}, 800);
+(function(){
+
+  var hs=document.createElement('script');hs.type='text/javascript';hs.async=true;
+
+  hs.src=('//s10.histats.com/js15_as.js');
+
+  (document.head||document.body).appendChild(hs);
+
+})();
+
 </script>
 
+<noscript><a href="/" target="_blank"><img src="//sstatic1.histats.com/0.gif?4978236&101" alt="hit counter" border="0"></a>
+
+  </noscript>
+  
 </body>
 </html>
